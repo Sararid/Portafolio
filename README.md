@@ -6,8 +6,9 @@
 
 - 🔭 Please find here my completed ** Responsive ** [Portfolio](https://sararid.github.io/portfolio/) where you can find my current completed projects.
 
-<h3 >This portafolio is built with React.Js
-✨✨
+<h3 >This portafolio is built with React.Js ✨✨</h3>
+  
+  
 
 - 👨‍💻If you are curious to see my code, feel free to checkout the `src/` folder!
 
