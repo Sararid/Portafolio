@@ -1,0 +1,29 @@
+@import "../../styles/Mixins.scss";
+@import "../../styles/Variables.scss";
+
+.navContainer {
+  position: relative;
+  /* keep the hamburger button above everything */
+  z-index: 100;
+
+  border: none;
+  cursor: pointer;
+  &__list {
+    height: 55px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 1rem;
+    background-color: $lightViolet;
+
+    &--el {
+      @include styleLink;
+      color: $white;
+    }
+    &--el:hover {
+      @include styleLinkHover;
+    }
+  }
+}

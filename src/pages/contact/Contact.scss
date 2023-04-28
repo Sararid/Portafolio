@@ -1,0 +1,79 @@
+@import "../../styles/Variables.scss";
+@import "../../styles/Mixins.scss";
+
+.contact {
+  color: $black;
+  padding: 5rem 0.83334rem;
+  color: $white;
+  @include flexColumnCenter;
+  height: 100vh;
+  @media all and (max-width: 768px) {
+    display: grid;
+    justify-itrems: center;
+  }
+
+  &__title {
+    color: $lightViolet;
+    text-decoration: underline;
+  }
+  &__description {
+    text-align: center;
+    padding: 0.83334rem 0;
+    color: $white;
+  }
+  &__form {
+    @include flexColumnCenter;
+    margin: 1rem 0;
+    color: $white;
+
+    &--title {
+      padding: 0.27778rem 0;
+    }
+
+    &--style {
+      margin: 5px 0;
+      padding: 0.6rem;
+      padding-right: 0.27778rem;
+      border: solid 2px $black;
+      border-radius: 3px;
+      width: 270px;
+      @media all and (min-width: 768px) {
+        width: 300px;
+      }
+      @media all and (min-width: 1200px) {
+        width: 500px;
+      }
+    }
+    &--text {
+      padding: 0.83334rem;
+      margin: 3px 0;
+      border: solid 2px $black;
+      padding-right: 0.27778rem;
+      border-radius: 3px;
+      width: 270px;
+      @media all and (min-width: 768px) {
+        width: 300px;
+      }
+      @media all and (min-width: 1200px) {
+        width: 500px;
+      }
+    }
+  }
+  &__submit {
+    text-align: center;
+    text-transform: uppercase;
+    width: 20%;
+    border: solid 2px $black;
+    width: 100px;
+    height: 40px;
+    margin: 5px 0;
+    border-radius: 4px;
+    background-color: $orange;
+    color: $black;
+  }
+  &__submit:hover {
+    background-color: $black;
+    color: $orange;
+    cursor: pointer;
+  }
+}

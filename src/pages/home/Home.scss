@@ -1,0 +1,7 @@
+@import "../../styles/Variables.scss";
+
+.homeContainer {
+  background-color: $black;
+  // @include flexColumnCenter;
+  //justify-content: space-between;
+}

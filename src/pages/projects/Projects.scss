@@ -1,0 +1,84 @@
+@import "../../styles/Variables.scss";
+@import "../../styles/Mixins.scss";
+
+.projects {
+  background-color: $black;
+  padding: 3rem 3rem;
+
+  @include flexColumnCenter;
+  @media all and (min-width: 1232px) {
+    padding: 5rem;
+  }
+  &__title {
+    padding: 2rem;
+    font-size: 2em;
+  }
+  &__container {
+    @include flexRowCenter;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    @media all and (max-width: 768px) {
+      @include flexColumnCenter;
+    }
+  }
+  &__card {
+    @include flexColumnCenter;
+    margin: 1rem 1rem;
+    width: 200px;
+    transition: transform 0.5s ease;
+    &--img {
+      width: 100%;
+      height: 200px;
+      border-radius: 20px;
+      margin-bottom: 0.6rem;
+    }
+
+    &--title {
+      text-align: center;
+      height: 65px;
+      padding-top: 0.5556rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    &--link {
+      @include styleLink;
+      text-align: center;
+    }
+    &--link:hover {
+      @include styleLinkHover;
+    }
+    &--desc {
+      color: $black;
+      font-size: 0.7em;
+      padding-bottom: 1.2rem;
+      text-align: center;
+    }
+    &--linkWrap {
+      @include flexColumnCenter;
+      flex-wrap: wrap;
+      @media all and (min-width: 768px) {
+        margin-top: 1.75em;
+      }
+    }
+    &--icons {
+      padding-right: 0.45em;
+    }
+  }
+
+  &__wrap {
+    @include flexColumnCenter;
+    flex-wrap: wrap;
+    margin: 0 1.1rem;
+    padding-top: 1.6667rem;
+    padding-bottom: 2.5rem;
+    :hover {
+      transform: scale(1.1);
+    }
+    @media all and (min-width: 768px) {
+      @include flexRowCenter;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 1.112rem 0;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import "../../styles/Mixins.scss";
+@import "../../styles/Variables.scss";
+
+.footer {
+  @include flexColumnCenter;
+
+  background-color: $lightViolet;
+  color: $white;
+
+  &__sm {
+    @include flexRowCenter;
+    margin: 1em;
+    &--icon {
+      font-size: 2em;
+      padding: 0.5rem;
+      color: $white;
+    }
+  }
+  &__copy {
+    padding: 0.8em 0.8em;
+    text-align: center;
+    font-size: 0.88rem;
+  }
+}
+
+.link_style {
+  font-size: 1.4em;
+
+  :hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+  }
+}

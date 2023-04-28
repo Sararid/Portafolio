@@ -1,0 +1,109 @@
+@import "../../styles/Variables.scss";
+@import "../../styles/Mixins.scss";
+
+.main {
+  @include flexColumnCenter;
+  background-color: $lightViolet;
+  color: $offwhite;
+  &__title {
+    padding: 4rem 1rem;
+    font-size: 2em;
+  }
+
+  &__aboutSection {
+    @include flexColumnCenter;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &--img {
+      border-radius: 50%;
+      border: 3px dotted $black;
+      margin-bottom: 20px;
+    }
+
+    &--title {
+      margin-bottom: 10px;
+      @media all and (min-width: 768px) {
+      }
+    }
+
+    &--description {
+      padding: 1.9rem 1.5rem;
+      line-height: 25px;
+      @media all and (min-width: 768px) {
+        max-width: 80%;
+        padding: 3rem;
+      }
+    }
+    &--card {
+      @include flexRowCenter;
+      padding-bottom: 3rem;
+    }
+  }
+}
+
+.cardSkills {
+  // flex-wrap: wrap;
+  // justify-content: space-evenly;
+  // align-items: stretch;
+  perspective: 500px; /* Remove this if you don't want the 3D effect */
+  /* This container is needed to position the front and back side */
+  // height: 200px;
+  // width: 350px;
+  width: 200px;
+  height: 200px;
+  margin: 1rem;
+  border: 1px solid olive;
+  &__content {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  &__front {
+    /* Position the front and back side */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    &--title {
+      padding: 1rem;
+    }
+    &--icon {
+      margin-top: 1rem;
+      font-size: 2em;
+    }
+  }
+  &__back {
+    width: 200px;
+    height: 200px;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    background-color: $darkViolet;
+    color: white;
+    transform: rotateY(180deg);
+
+    @media all and (min-width: 768px) {
+      @include flexRowCenter;
+      //  align-items: flex-start;
+    }
+  }
+
+  &__tech {
+    @include flexRowCenter;
+    flex-wrap: wrap;
+
+    &--item {
+      padding: 0.5rem;
+    }
+  }
+
+  .cardSkills:hover &__content {
+    transform: rotateY(180deg);
+  }
+}
