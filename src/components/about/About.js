@@ -5,17 +5,19 @@ import "./About.scss";
 import SkillsCard from "./skillsCard/SkillsCard";
 //skills data
 import { skills } from "../../data/skills";
+//asset
+import Avatar from "../../assets/avatar.jpg";
 
-function About({ id = "aboutSection" }) {
+function About() {
     return (
-        <section className="main" id={id}>
+        <section className="main">
             <div>
                 <h1 className="main__title ">About me</h1>
             </div>
             <div className="main__aboutSection">
                 <img
                     className="main__aboutSection--img"
-                    src="./assets/images/avatar.jpg"
+                    src={Avatar}
                     width="200px"
                     height="200px"
                     alt="profile picture"
@@ -33,7 +35,6 @@ function About({ id = "aboutSection" }) {
                     <SkillsCard title={item.title} items={item.items} />
                 ))}
             </div>
-
         </section>
     );
 }

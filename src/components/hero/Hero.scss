@@ -11,10 +11,9 @@
   }
 
   &__button {
-    // margin: 2rem;
-    @include buttonStyle;
+    @include buttonHero;
   }
   &__button:hover {
-    @include buttonStylehover;
+    @include buttonHeroHover;
   }
 }

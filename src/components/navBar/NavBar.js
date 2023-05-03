@@ -1,16 +1,12 @@
 import React from "react";
-import { Outlet, Link, useLocation } from "react-router-dom";
-//The "layout route" is a shared component that inserts common content on all pages, such as a navigation menu.
-
+import { Outlet, Link } from "react-router-dom";
 //style
 import "./NavBar.scss";
 
 function NavBar() {
-
   return (
     <header>
       <nav className="navContainer">
-
         <ul className="navContainer__list">
           <li>
             <Link className="navContainer__list--el" to="/">

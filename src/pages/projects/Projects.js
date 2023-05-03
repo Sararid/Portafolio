@@ -4,8 +4,7 @@ import "./Projects.scss";
 //projects data
 import { projectsData } from "../../data/projects";
 //component
-import ProjectCard from "./projectCard/ProjectCard";
-
+import ProjectCard from "../../components/projectCard/ProjectCard";
 function Projects() {
     return (
         <section className="projects">

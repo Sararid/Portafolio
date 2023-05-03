@@ -3,10 +3,7 @@
 
 .navContainer {
   position: relative;
-  /* keep the hamburger button above everything */
   z-index: 100;
-
-  border: none;
   cursor: pointer;
   &__list {
     height: 55px;

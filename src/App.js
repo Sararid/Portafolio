@@ -1,3 +1,5 @@
+import React from "react";
+//style
 import './styles/App.scss';
 //component
 import NavigationScreens from './routes/NavigationPages';

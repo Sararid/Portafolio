@@ -1,0 +1,58 @@
+@import "../../../styles/Mixins.scss";
+@import "../../../styles/Variables.scss";
+
+.cardSkills {
+  perspective: 500px;
+  width: 200px;
+  height: 200px;
+  margin: 1rem;
+  border: 1px solid olive;
+  &__content {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  &__front {
+    /* Position the front and back side */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    &--title {
+      padding: 1rem;
+    }
+    &--icon {
+      margin-top: 1rem;
+      font-size: 2em;
+    }
+  }
+  &__back {
+    width: 200px;
+    height: 200px;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    background-color: $darkViolet;
+    transform: rotateY(180deg);
+    @media all and (min-width: 768px) {
+      @include flexRowCenter;
+    }
+  }
+
+  &__tech {
+    flex-wrap: wrap;
+    padding: 1rem 0rem;
+    @media all and (min-width: 768px) {
+      padding: 4rem 3.5rem;
+    }
+  }
+
+  .cardSkills:hover &__content {
+    transform: rotateY(180deg);
+  }
+}

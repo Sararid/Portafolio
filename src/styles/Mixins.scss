@@ -18,23 +18,23 @@
   align-items: center;
 }
 
-@mixin buttonStyle {
-  border-color: $white;
-  color: $black;
+@mixin buttonHero {
   width: 155px;
   height: 45px;
-  font-weight: bold;
-  font-size: 0.9rem;
-  margin: 1rem 1rem;
+  margin: 2rem 1rem;
   border-radius: 5px;
-  letter-spacing: 2px;
-  transition: all 1s ease-in-out;
+  font-weight: bold;
+  box-shadow: inset 250px 0 0 0 $white;
+  color: $darkViolet;
+  transition: all 0.3s ease-in-out, box-shadow 0.5s ease-in-out;
 }
-@mixin buttonStylehover {
+@mixin buttonHeroHover {
   cursor: pointer;
   transform: scale(1.1, 1.1);
   opacity: 1;
+  color: $lightViolet;
 }
+
 @mixin styleLink {
   text-decoration: none;
   text-transform: uppercase;
@@ -53,4 +53,18 @@
   cursor: pointer;
   box-shadow: inset 250px 0 0 0 $darkViolet;
   color: $white;
+}
+
+@mixin formInputStyle {
+  padding: 0.63334rem;
+  padding-right: 0.27778rem;
+  border: solid 2px $black;
+  border-radius: 3px;
+  width: 270px;
+  @media all and (min-width: 768px) {
+    width: 500px;
+  }
+  @media all and (min-width: 1200px) {
+    width: 700px;
+  }
 }

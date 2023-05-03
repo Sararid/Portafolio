@@ -1,30 +1,33 @@
-import React from 'react'
+import React from "react";
 
 //icons
 import { BsTools } from "react-icons/bs";
 import { GiToolbox } from "react-icons/gi";
 //styles
-import '../About.scss';
-function SkillsCard({ title, items }) {
+import "./SkillsCard.scss";
 
+function SkillsCard({ title, items }) {
     return (
         <div className="cardSkills">
-            <div className='cardSkills__content'>
-                <div className='cardSkills__front'>
+            <div className="cardSkills__content">
+                <div className="cardSkills__front">
                     <h2 className="cardSkills__front--title">{title}</h2>
-                    {title === "Skills" ? <GiToolbox className="cardSkills__front--icon" /> : <BsTools className="cardSkills__front--icon" />}
+                    {title === "Skills" ? (
+                        <GiToolbox className="cardSkills__front--icon" />
+                    ) : (
+                        <BsTools className="cardSkills__front--icon" />
+                    )}
                 </div>
                 <div className="cardSkills__back">
-
                     <ul className="cardSkills__tech">
-                        {items.map((element) => <li className="cardSkills__tech--item"> {element}</li>)}
+                        {items.map((element) => (
+                            <li className="cardSkills__tech--item">{element}</li>
+                        ))}
                     </ul>
                 </div>
-
-            </div >
-
-        </div >
-    )
+            </div>
+        </div>
+    );
 }
 
-export default SkillsCard
+export default SkillsCard;

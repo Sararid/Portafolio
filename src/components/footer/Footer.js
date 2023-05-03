@@ -4,14 +4,12 @@ import { useLocation } from "react-router-dom";
 //style
 import "./Footer.scss";
 //icons
-import { BiDownArrow } from "react-icons/bi";
 import { BsLinkedin, BsGithub, BsTwitter, BsMailbox } from "react-icons/bs";
 
 function Footer() {
-    const colorFooter = useLocation().pathname === "/" ? "#883c82" : null
+    const colorFooter = useLocation().pathname === "/" ? "#883c82" : null;
     return (
         <footer className="footer" style={{ backgroundColor: colorFooter }}>
-
             <div className="footer__sm">
                 <div className="footer__sm--style">
                     <a
@@ -53,7 +51,7 @@ function Footer() {
                 </div>
             </div>
             <div className="footer__copy">
-                <p>Designed and developed by Sara R. &copy2021</p>
+                <p>Designed and developed by Sara R.</p>
             </div>
         </footer>
     );

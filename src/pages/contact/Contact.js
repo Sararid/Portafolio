@@ -9,7 +9,6 @@ function Contact() {
             <p className="contact__description">
                 Do you have a question or would you like to get in touch?
             </p>
-
             <form
                 action="https://formspree.io/f/xqkwjgkn"
                 method="POST"
@@ -35,6 +34,9 @@ function Contact() {
                     name="emailAddress"
                     required
                 />
+                <label htmlFor="message" className="contact__form--title">
+                    Message:
+                </label>
                 <textarea
                     className="contact__form--text"
                     id="message"
