@@ -11,6 +11,24 @@ import { DiJavascript1 } from "react-icons/di";
 
 export const projectsData = [
     {
+        "title": "Rick and Morty App",
+        "link": "https://github.com/Sararid/Rick-and-Morty-search-engine",
+        "image": RickAndMorty,
+        "icons": [
+            <FaReact />,
+            <FaSass />
+        ]
+    },
+    {
+        "title": "RANDA Shop",
+        "link": "https://github.com/Sararid/JUMP2DIGITAL-Minimalistic-checkout-",
+        "image": Makeup,
+        "icons": [
+            <FaReact />,
+            <FaSass />
+        ]
+    },
+    {
         "title": "Responsive Landing page",
         "link": "https://sararid.github.io/Landing-page-with-html-css/",
         "image": LandingPage,
@@ -45,23 +63,5 @@ export const projectsData = [
             <FaCss3Alt />,
             <FaSass />
         ]
-    },
-    {
-        "title": "Rick and Morty App",
-        "link": "https://github.com/Sararid/Rick-and-Morty-search-engine",
-        "image": RickAndMorty,
-        "icons": [
-            <FaReact />,
-            <FaSass />
-        ]
-    },
-    {
-        "title": "RANDA Shop",
-        "link": "https://github.com/Sararid/JUMP2DIGITAL-Minimalistic-checkout-",
-        "image": Makeup,
-        "icons": [
-            <FaReact />,
-            <FaSass />
-        ]
-    },
+    }
 ]
